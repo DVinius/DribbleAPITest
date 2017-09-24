@@ -7,89 +7,102 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="20dp"
         >
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/rlShootImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintDimensionRatio="H,4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
             <ImageView
                 android:id="@+id/detailShootImg"
-                android:src="@mipmap/ic_launcher"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:scaleType="fitCenter"
-                android:visibility="invisible"
+                android:adjustViewBounds="true"
+
                 />
 
             <com.wang.avi.AVLoadingIndicatorView
                 android:id="@+id/aviNiceLoadingAnim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 app:indicatorName="BallScaleMultipleIndicator"
                 style="@style/AVLoadingIndicatorView.Large"
                 app:indicatorColor="@color/colorAccent"
-
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 />
-        </RelativeLayout>
+        </FrameLayout>
 
         <TextView
             android:id="@+id/tvShootDetDescription"
-            android:layout_below="@+id/rlShootImage"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp"
-            android:paddingTop="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingEnd="14dp"
+            android:paddingStart="14dp"
+            android:paddingTop="14dp"
             android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/rlShootImage"
             />
-
 
         <TextView
             android:id="@+id/tvShootDetViewsCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvShootDetDescription"
-            android:drawableStart="@mipmap/ic_visibility_black_24dp"
             android:drawablePadding="7dp"
+            android:drawableStart="@mipmap/ic_visibility_black_24dp"
             android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:padding="7dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="14dp"
             android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tvShootDetDescription"
             />
 
         <TextView
             android:id="@+id/tvShootDetCommentsCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@mipmap/ic_forum_black_24dp"
-            android:drawablePadding="7dp"
-            android:gravity="center_vertical"
             android:layout_below="@id/tvShootDetViewsCount"
-            android:padding="7dp"
-            android:textSize="18sp"
+            android:drawablePadding="7dp"
+            android:drawableStart="@mipmap/ic_forum_black_24dp"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="14dp"
             android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvShootDetViewsCount"
             />
 
         <TextView
             android:id="@+id/tvShootDetCreatedAt"
-            android:layout_below="@id/tvShootDetCommentsCount"
-            android:padding="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tvShootDetCommentsCount"
+            android:drawablePadding="7dp"
             android:drawableStart="@mipmap/ic_event_black_24dp"
             android:gravity="center_vertical"
-            android:drawablePadding="7dp"
-            android:textSize="17sp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="26dp"
             android:text="dd/MM/yyyy HH:mm:ss"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvShootDetCommentsCount"
             />
-    </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -49,7 +49,6 @@ public class ShootDetailActivity extends AppCompatActivity {
         final ImageView ivShootImg = findViewById(R.id.detailShootImg);
         Picasso.with(this)
                 .load(detailedShoot.getNormalImageUrl())
-                .placeholder(R.mipmap.static_progress_img)
                 .into(ivShootImg, new Callback() {
                     @Override
                     public void onSuccess() {
