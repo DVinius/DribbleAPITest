@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:padding="6dip">
+
+    <ImageView
+        android:id="@+id/shootImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Shoot Image"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/shootTitle"
+        android:layout_toEndOf="@id/shootImage"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:text="Shoot Title"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/shootViewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shootTitle"
+        android:layout_toEndOf="@+id/shootImage"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:drawableStart="@mipmap/ic_visibility_black_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="7dp"
+        android:text="0"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/shootCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shootViewCount"
+        android:layout_toEndOf="@id/shootImage"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:drawableStart="@mipmap/ic_event_black_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="7dp"
+        android:text="0"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>
