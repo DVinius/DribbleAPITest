@@ -1,11 +1,5 @@
 package com.vsgdev.models;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
-
-import java.text.DateFormat;
-import java.util.Calendar;
-
 /**
  * Created by franklin on 23/09/17.
  */

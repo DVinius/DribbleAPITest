@@ -14,4 +14,7 @@ public class AppConstants {
     public static final String SHOOT_IMAGES = "images";
     public static final String SHOOT_NORMAL_IMAGE = "normal";
     public static final String SHOOT_TEASER_IMAGE = "teaser";
+    public static final String DRIBBBLE_API_KEY = "ebed03191c0ead058db6b9063520775351610bc94526924f2a02e6caf74a87d1";
+    public static final String DRIBBBLE_GET_SHOOTS_URL = "https://api.dribbble.com/v1/shots?sort=recent&access_token="+DRIBBBLE_API_KEY;
+
 }
